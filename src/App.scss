@@ -12,8 +12,7 @@ body {
 }
 
 .container {
-  width: 1280px;
-  min-width: 1280px;
+  min-width: 560px;
   margin: 0 auto;
   .wrapper {
     padding: 0 48px;
@@ -21,7 +20,7 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 60%;
+      height: 100%;
       width: 100%;
       p {
         font-size: 0.75rem;
@@ -61,6 +60,7 @@ header {
         outline: none;
         cursor: pointer;
         font-size: 0.8rem;
+        mix-blend-mode: difference;
       }
     }
   }
@@ -100,7 +100,9 @@ header {
         opacity: 0;
         background-size: cover;
         background-repeat: no-repeat;
-        animation: camera-pan 30s infinite;
+        animation-name: backgroundEffect;
+        animation-duration: 30s;
+        animation-iteration-count: infinite;
       }
       .wrapper {
         position: relative;
@@ -109,7 +111,7 @@ header {
           justify-content: space-between;
           align-items: center;
           position: relative;
-          top: 200px;
+          top: 100px;
           nav {
             display: block;
             ul {
@@ -151,9 +153,9 @@ header {
         .locations {
           position: absolute;
           bottom: -80px;
-          margin-bottom: 20px;
           color: #fff;
           margin-top: 16px;
+          margin-bottom: 20px;
           font-size: 0.8rem;
           font-weight: 600;
           span {
@@ -177,7 +179,7 @@ header {
   }
 }
 
-@keyframes camera-pan {
+@keyframes backgroundEffect {
   0% {
     background-position: 0% 0%;
   }
@@ -185,7 +187,7 @@ header {
     background-position: 40% 10%;
   }
   50% {
-    background-position: 0% 10%;
+    background-position: 0 10%;
   }
   75% {
     background-position: 10% 40%;
